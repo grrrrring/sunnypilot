@@ -116,7 +116,7 @@ void ModelRenderer::drawPath(QPainter &painter, const cereal::ModelDataV2::Reade
   auto now = std::chrono::steady_clock::now().time_since_epoch();
   float time_offset = std::chrono::duration_cast<std::chrono::milliseconds>(now).count() / 1000.0f; // seconds
 
-  if (false) { //(experimental_mode) {
+  if (experimental_mode) { //(experimental_mode) {
     // The first half of track_vertices are the points for the right side of the path
     const auto &acceleration = model.getAcceleration().getX();
     const int max_len = std::min<int>(track_vertices.length() / 2, acceleration.size());
@@ -143,7 +143,7 @@ void ModelRenderer::drawPath(QPainter &painter, const cereal::ModelDataV2::Reade
       i += (i + 2) < max_len ? 1 : 0;
     }
 
-  } else if (true) {  // Rainbow Mode
+  } else if (false) {  // Rainbow Mode
     const int max_len = track_vertices.length();
     bg.setSpread(QGradient::RepeatSpread);  // Repeat gradient for continuous effect
 
