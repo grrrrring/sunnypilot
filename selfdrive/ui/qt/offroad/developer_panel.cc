@@ -51,14 +51,14 @@ DeveloperPanel::DeveloperPanel(SettingsWindow *parent) : ListWidget(parent) {
   is_release = params.getBool("IsReleaseBranch");
 
   // Toggles should be not available to change in onroad state
-  QObject::connect(uiState(), &UIState::offroadTransition, this, &DeveloperPanel::updateToggles);
+  //QObject::connect(uiState(), &UIState::offroadTransition, this, &DeveloperPanel::updateToggles);
 }
 
 void DeveloperPanel::updateToggles(bool _offroad) {
-  for (auto btn : findChildren<ParamControl *>()) {
-    btn->setVisible(!is_release);
-    btn->setEnabled(_offroad);
-  }
+  //for (auto btn : findChildren<ParamControl *>()) {
+  //  btn->setVisible(!is_release);
+ //   btn->setEnabled(_offroad);
+  //}
 
   // longManeuverToggle should not be toggleable if the car don't have longitudinal control
   auto cp_bytes = params.get("CarParamsPersistent");
@@ -71,7 +71,7 @@ void DeveloperPanel::updateToggles(bool _offroad) {
     longManeuverToggle->setEnabled(false);
   }
 
-  offroad = _offroad;
+  //offroad = _offroad;
 }
 
 void DeveloperPanel::showEvent(QShowEvent *event) {
