@@ -25,6 +25,7 @@ function install_ubuntu_common_requirements() {
     clang \
     build-essential \
     gcc-arm-none-eabi \
+    gcc-10 g++-10 \
     liblzma-dev \
     capnproto \
     libcapnp-dev \
