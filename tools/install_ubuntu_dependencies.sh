@@ -22,10 +22,9 @@ function install_ubuntu_common_requirements() {
   $SUDO apt-get update
   $SUDO apt-get install -y --no-install-recommends \
     ca-certificates \
-    clang \
     build-essential \
     gcc-arm-none-eabi \
-    gcc-10 g++-10 \
+    clang \
     liblzma-dev \
     capnproto \
     libcapnp-dev \
