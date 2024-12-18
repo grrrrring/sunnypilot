@@ -10,7 +10,7 @@ jobs:
     name: package_updates
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/commaai/openpilot-base:d40fd1956d5f7ac1e42c40d7e5b1740a528747a2
+      image: ghcr.io/commaai/openpilot-base:64db514d41eea2ffbed01998708596b7429f1fa5
     if: github.repository == 'sunnypilot/sunnypilot'
     steps:
     - uses: actions/checkout@v4
