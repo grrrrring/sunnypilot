@@ -1,5 +1,5 @@
 if [ "$1" = "base" ]; then
-  export DOCKER_IMAGE=openpilot-base
+  export DOCKER_IMAGE=openpilot-base:d40fd1956d5f7ac1e42c40d7e5b1740a528747a2
   export DOCKER_FILE=Dockerfile.openpilot_base
 elif [ "$1" = "prebuilt" ]; then
   export DOCKER_IMAGE=openpilot-prebuilt
